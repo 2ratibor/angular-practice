@@ -1,0 +1,10 @@
+Reccomend
+node v12.3.1
+npm v6.9.0
+
+Minimal
+node v10.16.0
+npm v6.9.0
+
+ToDo: Install this packages:
+npm i -g webpack json-server
