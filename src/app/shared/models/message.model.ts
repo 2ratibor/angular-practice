@@ -1,3 +1,9 @@
-export class Message {
-	constructor(public type: string, public text: string) {}
+export interface MessageData {
+	type: string;
+	text: string;
 }
+
+// tslint:disable-next-line
+export interface Message extends MessageData {}
+
+export class Message {}

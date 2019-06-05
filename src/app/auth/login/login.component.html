@@ -1,7 +1,7 @@
 <p class="text-xs-center">Войдите для работы</p>
 
 <div
-	*ngIf="message.text"
+	*ngIf="message"
 	class="alert alert-{{ message.type }}"
 >
 	{{ message.text }}
@@ -23,8 +23,8 @@
 		>
 
 		<span
-			class="form-help-text"
 			*ngIf="form.get('email').touched && form.get('email').invalid"
+			class="form-help-text"
 		>
 			<ng-container *ngIf="form.get('email')['errors']['required']">Email не может быть пустым.</ng-container>
 			<ng-container *ngIf="form.get('email')['errors']['email']">Введите корректный email.</ng-container>
@@ -46,11 +46,11 @@
 		>
 
 		<span
-			class="form-help-text"
 			*ngIf="form.get('password').touched && form.get('password').invalid"
+			class="form-help-text"
 		>
 			<ng-container *ngIf="form.get('password')['errors']['required']">Пароль не может быть пустым.</ng-container>
-			<ng-container *ngIf="form.get('password')['errors']['minlength']">
+			<ng-container *ngIf="form.get('password')['errors']['minlength'] && form.get('password')['errors']['minlength']['requiredLength']">
 				Пароль должен быть больше {{ form.get('password')['errors']['minlength']['requiredLength'] }}-ти символов.
 				Сейчас {{ form.get('password')['errors']['minlength']['actualLength'] }}
 			</ng-container>
