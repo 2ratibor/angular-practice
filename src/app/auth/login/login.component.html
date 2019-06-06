@@ -1,11 +1,6 @@
 <p class="text-xs-center">Войдите для работы</p>
 
-<div
-	*ngIf="message"
-	class="alert alert-{{ message.type }}"
->
-	{{ message.text }}
-</div>
+<wfm-message #loginMessage></wfm-message>
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 	<div

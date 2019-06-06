@@ -1,6 +1,6 @@
 export interface MessageData {
-	type: string;
 	text: string;
+	type: string;
 }
 
 // tslint:disable-next-line
