@@ -15,6 +15,10 @@ export class BillService extends BaseApi {
 		return this.get<Bill>('bill');
 	}
 
+	updateBill(bill: Bill): Observable<Bill> {
+		return this.put<Bill>('bill', bill);
+	}
+
 	// Мы могли бы запрашивать определенный тип валют (base), но для этого нужен платный аккаунт
 	getCurrency(base: string = 'RUB'): Observable<any> {
 		return this.httpClient.get(
